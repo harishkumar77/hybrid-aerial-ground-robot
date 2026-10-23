@@ -1,0 +1,8 @@
+[package]
+name = "hybrid_safety"
+version = "0.1.0"
+edition = "2021"
+default-run = "hybrid_safety"
+description = "Safety supervisor (interlocks, watchdog, arm/disarm, auto/manual, fail-safe) for a hybrid aerial-ground robot"
+
+[dependencies]
