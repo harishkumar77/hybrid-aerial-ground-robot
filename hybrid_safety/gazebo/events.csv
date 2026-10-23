@@ -1,0 +1,17 @@
+2;HAZARD: ground sensing contradicts aerial draft at (6,7) (6,8) (6,9)
+2;LOCAL REPAIR: +1 step detour, rejoins global plan at (9,8)
+3;HAZARD: ground sensing contradicts aerial draft at (7,7) (7,8) (7,9)
+5;HAZARD: ground sensing contradicts aerial draft at (8,7) (8,8)
+5;LOCAL REPAIR: +0 step detour, rejoins global plan at (11,8)
+9;HAZARD: ground sensing contradicts aerial draft at (8,9)
+13;HAZARD: ground sensing contradicts aerial draft at (16,8)
+13;LOCAL REPAIR: +0 step detour, rejoins global plan at (19,8)
+32;resolved 5 unknown cell(s) under canopy
+33;HAZARD: ground sensing contradicts aerial draft at (34,6)
+33;resolved 4 unknown cell(s) under canopy
+34;HAZARD: ground sensing contradicts aerial draft at (35,6) (35,8)
+34;resolved 3 unknown cell(s) under canopy
+35;HAZARD: ground sensing contradicts aerial draft at (36,6)
+35;resolved 4 unknown cell(s) under canopy
+36;resolved 5 unknown cell(s) under canopy
+46;ARRIVED at goal
