@@ -3,8 +3,10 @@
 > **Status: work in progress.** This repo collects the whole project. Components are added as
 > they mature; the first one published is the safety supervisor and planning prototype.
 
-A hybrid robot that **drives most of the way and flies only where it must** (for example over a
-river). A quick aerial survey builds a draft map, a mode-typed planner decides drive vs fly for
+I'm working on a hypothetical model which is a hybrid robot (quadcopter and quad-wheeled rover  that **drives most of the way and flies only where it must** (for example over a
+river). This was build to considering how efficient it can be when it comes to energy use, payload, handling the obstacles like river, ditches, walls and rubble. 
+
+The model starts working by taking a quick aerial survey builds a draft map, a mode-typed planner decides drive vs fly for
 every step, ground sensing corrects the map along the way, and a safety supervisor sits between
 the planner and the actuators.
 
