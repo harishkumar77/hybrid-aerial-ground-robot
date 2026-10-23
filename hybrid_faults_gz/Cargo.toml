@@ -1,0 +1,9 @@
+[package]
+name = "hybrid_faults_gz"
+version = "0.1.0"
+edition = "2021"
+description = "Fault-injection scenarios for the hybrid robot, driven by the real hybrid_safety supervisor, exported for Gazebo"
+
+[dependencies]
+# Uses the existing project read-only. Keep both folders side by side in ~/rust_ws.
+hybrid_safety = { path = "../hybrid_safety" }
