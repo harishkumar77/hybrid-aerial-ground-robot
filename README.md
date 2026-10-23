@@ -10,6 +10,7 @@ The model starts working by taking a quick aerial survey builds a draft map, a m
 every step, ground sensing corrects the map along the way, and a safety supervisor sits between
 the planner and the actuators.
 
+
 **Core idea of the safety layer:** the same fault needs a different safe reaction depending on mode.
 If the planner crashes while driving, the robot brakes. If it crashes while flying, it holds
 position and lands, because stopping in the air means falling.
@@ -79,6 +80,21 @@ python3 gazebo/fault_replay.py planner_dies_flying --quiet   # terminal 2
 ```
 
 Robot color in Gazebo = supervisor state: green AUTO · amber TAKEOFF/LANDING · red FAIL-SAFE · blue MANUAL · grey DISARMED.
+
+
+## Why Rust?
+
+I chose Rust for this project partly to explore the language for robotics, and partly because
+it suits safety-critical code:
+
+- **Memory and thread safety at compile time**, without a garbage collector (no pauses in the control loop)
+- **The type system can enforce safety rules**: an autonomous actuator command can only be built with a
+  `Permit`, which only the supervisor can create, so "command while disarmed" doesn't compile
+- **Exhaustive `match`**: every state and fail-safe case must be handled
+- **C++-level performance**, and it works with ROS2 (`rclrs`) and `px4_msgs`
+
+The design itself (state machine, interlocks, platform interface) isn't Rust-specific and
+would map directly to C++ or Java.
 
 ## Current limitations
 - Planning uses a 2D grid with rule-based sensor models, not real sensor data
