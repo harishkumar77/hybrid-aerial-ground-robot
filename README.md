@@ -52,6 +52,10 @@ Perception ─► Localization ─► Planning ─► Control ─► [Safety Sup
 - **A\* over (cell, mode)**: every step typed drive or fly; takeoff/landing cost; switch only on verified-free cells
 - Ground sensing corrects the map; **local repair** detours and rejoins the global plan; global re-plan is the fallback
 
+
+## Implementation results 
+
+
 ## Quick start
 
 Requires Rust (`cargo`); Gazebo Harmonic for the 3D replay.
